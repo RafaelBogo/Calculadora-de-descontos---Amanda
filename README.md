@@ -18,7 +18,7 @@ O projeto consiste em várias classes Java, cada uma desempenhando um papel espe
 
 1. **Criação do Orçamento**: Um objeto `Orcamento` é criado com o valor, a quantidade de alunos e a quantidade de meses.
 2. **Cálculo dos Descontos**: O objeto `Orcamento` é passado para a classe `CalcularDesconto`, que inicia a cadeia de descontos.
-3. **Aplicação dos Descontos**: Cada classe de desconto na cadeia verifica se a condição para o desconto é atendida. Se for, o desconto é aplicado ao valor do orçamento, e o próximo desconto na cadeia é chamado.
+3. **Aplicação dos Descontos**: Cada classe de desconto na cadeia verifica se a condição para o desconto é atendida. Se for, o desconto é acumulado no valor do desconto total no objeto `Orcamento`, e o próximo desconto na cadeia é chamado.
 4. **Resultado Final**: O valor final do orçamento, após a aplicação de todos os descontos aplicáveis, é retornado e exibido.
 
 ## Exemplo de Uso
