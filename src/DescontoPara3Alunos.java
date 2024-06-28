@@ -6,12 +6,11 @@ public class DescontoPara3Alunos extends Desconto{
 
     @Override
     public double calcular(Orcamento orcamento) {
-        double total;
         if (orcamento.getQuantidadeDeAlunos() > 2){
-            return proximo.calcular(new Orcamento(orcamento.getValor() * 0.97, orcamento.getQuantidadeMeses(), orcamento.getQuantidadeDeAlunos()));
-        } else {
-            return proximo.calcular(orcamento);
+            double desconto = orcamento.getValor() * 0.03;
+            orcamento.setTotalDesconto(orcamento.getTotalDesconto() + desconto);
         }
+            return proximo.calcular(orcamento);
 
     }
 }

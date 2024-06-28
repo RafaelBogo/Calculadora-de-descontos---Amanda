@@ -6,6 +6,6 @@ public class SemDesconto extends Desconto{
 
     @Override
     public double calcular(Orcamento orcamento) {
-        return orcamento.getValor();
+        return orcamento.getValor() - orcamento.getTotalDesconto();
     }
 }

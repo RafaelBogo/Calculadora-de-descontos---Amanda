@@ -5,11 +5,11 @@ public class DescontoParaTresMeses extends Desconto{
 
     @Override
     public double calcular(Orcamento orcamento) {
-        if (orcamento.getQuantidadeMeses() >= 3){
-            return proximo.calcular(new Orcamento(orcamento.getValor() * 0.97, orcamento.getQuantidadeDeAlunos(), orcamento.getQuantidadeMeses()));
-        } else {
-            return proximo.calcular(orcamento);
+        if (orcamento.getQuantidadeMeses() >= 3) {
+            double desconto = orcamento.getValor() * 0.03;
+            orcamento.setTotalDesconto(orcamento.getTotalDesconto() + desconto);
         }
+            return proximo.calcular(orcamento);
 
     }
 }
